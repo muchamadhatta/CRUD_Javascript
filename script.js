@@ -2,8 +2,7 @@ var SelectedRow = null;
 //Show Alerts
 function showAlert(message, className) {
     const div = document.createElement("div");
-    div.className = 'alert alert-${className}';
-
+    div.className = `alert alert-${className}`
     div.appendChild(document.createTextNode(message));
     const container = document.querySelector(".container");
     const main = document.querySelector(".main");
@@ -12,7 +11,9 @@ function showAlert(message, className) {
     setTimeout(() => document.querySelector(".alert").remove(), 3000);
 }
 
-//Delete Data
+
+
+//Delete Data  b
 
 document.querySelector("#student-list").addEventListener("click", (e) => {
     target = e.target;
