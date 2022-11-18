@@ -50,10 +50,28 @@ document.querySelector("#student-form").addEventListener("submit", (e) => {
             SelectedRow.children[0].textContent = firstName;
             SelectedRow.children[1].textContent = lastName;
             SelectedRow.children[2].textContent = rollNo;
+            SelectedRow = null;
+            showAlert("Student Info Edited", "info");
 
         }
+        clearFields();
     }
 });
+
+//Edit Data
+document.querySelector("#student-list").addEventListener("click", (e) => {
+    target = e.target;
+    if (target.classList.contains("edit")) {
+        SelectedRow = target.parentElement.parentElement;
+        document.querySelector("#firstName").value = SelectedRow.children[0].textContent;
+        document.querySelector("#lastName").value = SelectedRow.children[1].textContent;
+        document.querySelector("#rollNo").value = SelectedRow.children[2].textContent;
+
+    }
+});
+
+
+
 
 //Delete Data  b
 
